@@ -221,11 +221,29 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
         background:#1a1a1a;color:#fff;padding:8px 16px;border-radius:16px;
         font-size:.8rem;z-index:8000;opacity:0;transition:opacity .3s;
         border:1px solid var(--g);pointer-events:none;white-space:nowrap}
+
+
+.ofertas-wrap{max-width:1400px;margin:12px auto 0;padding:0 14px}
+.ofertas-title{font-size:.85rem;font-weight:900;color:var(--red);
+  margin-bottom:8px;letter-spacing:.5px}
+.ofertas-scroll{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;
+  padding-bottom:4px}
+.ofertas-scroll::-webkit-scrollbar{display:none}
+.ocard{flex:0 0 140px;background:var(--bg3);border:1.5px solid var(--red);
+  border-radius:14px;padding:8px;display:flex;flex-direction:column;gap:4px}
+.oimg{width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;background:#111}
+.onombre{font-size:.72rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ocolor{font-size:.62rem;color:var(--text2)}
+.oprecio-row{font-size:.8rem}
+.oprecio-old{color:var(--text2);text-decoration:line-through;font-size:.68rem}
+.oprecio{color:var(--red);font-weight:900}
+.obtn{margin-top:2px;background:var(--wa);color:#fff;border-radius:10px;
+  text-align:center;font-size:.68rem;font-weight:700;padding:5px;text-decoration:none}
 </style>
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 06/09/2026 22:03 · 155 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 06/09/2026 23:03 · 155 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -256,6 +274,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   </select>
 </div>
 <div class="search-hint">💡 Tip: también puedes buscar por talla, ej. "42"</div>
+
 <div class="filtros" id="filtros"><button class="fb active" onclick="filtrar('all',this)">Todas</button>
 <button class="fb" onclick="filtrar('ADIDAS',this)">ADIDAS</button>
 <button class="fb" onclick="filtrar('AMIRI',this)">AMIRI</button>
