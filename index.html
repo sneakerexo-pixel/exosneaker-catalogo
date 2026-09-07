@@ -223,27 +223,28 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
         border:1px solid var(--g);pointer-events:none;white-space:nowrap}
 
 
-.ofertas-wrap{max-width:1400px;margin:12px auto 0;padding:0 14px}
-.ofertas-title{font-size:.85rem;font-weight:900;color:var(--red);
-  margin-bottom:8px;letter-spacing:.5px}
-.ofertas-scroll{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;
-  padding-bottom:4px}
-.ofertas-scroll::-webkit-scrollbar{display:none}
-.ocard{flex:0 0 140px;background:var(--bg3);border:1.5px solid var(--red);
-  border-radius:14px;padding:8px;display:flex;flex-direction:column;gap:4px}
-.oimg{width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;background:#111}
-.onombre{font-size:.72rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ocolor{font-size:.62rem;color:var(--text2)}
-.oprecio-row{font-size:.8rem}
-.oprecio-old{color:var(--text2);text-decoration:line-through;font-size:.68rem}
+.ofertas-fab{position:fixed;bottom:70px;left:14px;z-index:300;
+  background:var(--red);color:#fff;border:none;border-radius:24px;height:40px;
+  padding:0 16px;display:flex;align-items:center;gap:6px;font-size:.76rem;
+  font-weight:800;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.ofertas-scroll-modal{display:flex;flex-direction:column;gap:10px;
+  max-height:60vh;overflow-y:auto}
+.ocard{background:var(--bg2);border:1.5px solid var(--red);
+  border-radius:14px;padding:10px;display:flex;gap:10px;align-items:center}
+.oimg{width:64px;height:64px;object-fit:contain;border-radius:8px;background:#111;flex-shrink:0}
+.oinfo{flex:1;min-width:0}
+.onombre{font-size:.8rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ocolor{font-size:.68rem;color:var(--text2)}
+.oprecio-row{font-size:.85rem;margin-top:2px}
+.oprecio-old{color:var(--text2);text-decoration:line-through;font-size:.7rem;margin-right:4px}
 .oprecio{color:var(--red);font-weight:900}
-.obtn{margin-top:2px;background:var(--wa);color:#fff;border-radius:10px;
-  text-align:center;font-size:.68rem;font-weight:700;padding:5px;text-decoration:none}
+.obtn{background:var(--wa);color:#fff;border-radius:10px;
+  text-align:center;font-size:.7rem;font-weight:700;padding:6px 10px;text-decoration:none;flex-shrink:0}
 </style>
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 06/09/2026 23:07 · 155 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 06/09/2026 23:26 · 155 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -274,18 +275,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   </select>
 </div>
 <div class="search-hint">💡 Tip: también puedes buscar por talla, ej. "42"</div>
-
-    <div class="ofertas-wrap">
-      <div class="ofertas-title">🔥 Ofertas del momento</div>
-      <div class="ofertas-scroll">
-    <div class="ocard">
-      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg" class="oimg" alt="MIZUNO Digawel">
-      <div class="onombre">MIZUNO Digawel</div>
-      <div class="ocolor">🎨 BLANCO</div>
-      <div class="oprecio-row"><span class="oprecio-old">S/ 95</span> <span class="oprecio">S/ 70</span></div>
-      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%20*MIZUNO%20Digawel*%20%2C%20%C2%BFsigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
-    </div></div>
-    </div>
 <div class="filtros" id="filtros"><button class="fb active" onclick="filtrar('all',this)">Todas</button>
 <button class="fb" onclick="filtrar('ADIDAS',this)">ADIDAS</button>
 <button class="fb" onclick="filtrar('AMIRI',this)">AMIRI</button>
@@ -2806,6 +2795,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 <button class="cart-fab" id="cart-fab" onclick="openCart()">
   🛒<span class="cart-count" id="cart-count">0</span>
 </button>
+<button class="ofertas-fab" id="ofertas-fab" onclick="openOfertas()">🔥 Ofertas</button>
 <button class="sug-fab" id="sug-fab" onclick="openSugerencia()">💡 ¿No encuentras lo que buscas?</button>
 <div class="cart-modal" id="cart-modal" onclick="if(event.target===this)closeCart()">
   <div class="cart-inner">
@@ -2869,6 +2859,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     <button class="btn-clear-cart" onclick="closeYape()">Cerrar</button>
   </div>
 </div>
+
+    <div class="cart-modal" id="ofertas-modal" onclick="if(event.target===this)closeOfertas()">
+      <div class="cart-inner">
+        <div class="cart-handle"></div>
+        <div class="cart-title">🔥 Ofertas del momento</div>
+        <div class="ofertas-scroll-modal">
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg" class="oimg" alt="MIZUNO Digawel">
+      <div class="oinfo">
+        <div class="onombre">MIZUNO Digawel</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 95</span> <span class="oprecio">S/ 70</span></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%20*MIZUNO%20Digawel*%20%2C%20%C2%BFsigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div></div>
+      </div>
+    </div>
 <div id="toast"></div>
 <script>
 const WA="51958780838",NOMBRE="EXOSNEAKER";
@@ -2895,7 +2902,7 @@ function openLb(src,nombre,color,precio,imgFull){
 }
 function addCartFromLb(){if(lbData.nombre){addCart(lbData.nombre.split(' ')[0]||'',lbData.nombre.split(' ').slice(1).join(' ')||'',lbData.color,lbData.precio,lbData.img);closeLb();}}
 function closeLb(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLb();closeCart();closeSugerencia();closeYape();}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLb();closeCart();closeSugerencia();closeYape();closeOfertas();}});
 (function(){let sy=0;const lb=document.getElementById('lb');lb.addEventListener('touchstart',e=>sy=e.touches[0].clientY,{passive:true});lb.addEventListener('touchend',e=>{if(e.changedTouches[0].clientY-sy>90)closeLb();});})();
 function filtrar(brand,btn){activeBrand=brand;document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters();}
 
@@ -3031,7 +3038,8 @@ function confirmarYapePorWA(){
 
 // ── SUGERENCIAS ───────────────────────────────────────────────────────
 function openSugerencia(){document.getElementById('sug-modal').classList.add('on');document.body.style.overflow='hidden';}
-function closeSugerencia(){document.getElementById('sug-modal').classList.remove('on');document.body.style.overflow='';}
+function openOfertas(){document.getElementById('ofertas-modal').classList.add('on');document.body.style.overflow='hidden';}
+function closeOfertas(){document.getElementById('ofertas-modal').classList.remove('on');document.body.style.overflow='';}function closeSugerencia(){document.getElementById('sug-modal').classList.remove('on');document.body.style.overflow='';}
 function enviarSugerencia(){
   const producto=document.getElementById('sug-producto').value.trim();
   const talla=document.getElementById('sug-talla').value;
