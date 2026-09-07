@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0a0a0a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>EXOSNEAKER</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -244,7 +244,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 07/09/2026 08:14 · 157 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 07/09/2026 08:43 · 157 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -2828,7 +2828,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   🛒<span class="cart-count" id="cart-count">0</span>
 </button>
 <button class="ofertas-fab" id="ofertas-fab" onclick="openOfertas()">🔥 Ofertas</button>
-<button class="sug-fab" id="sug-fab" onclick="openSugerencia()">💡 ¿No encuentras lo que buscas?</button>
+<button class="sug-fab" id="sug-fab" <button class="sug-fab" id="install-fab" onclick="instalarApp()" style="display:none;bottom:70px">📲 Instalar App</button>onclick="openSugerencia()">💡 ¿No encuentras lo que buscas?</button>
 <div class="cart-modal" id="cart-modal" onclick="if(event.target===this)closeCart()">
   <div class="cart-inner">
     <div class="cart-handle"></div>
@@ -3062,6 +3062,19 @@ let _searchTimer=null;
 function buscar(q){
   clearTimeout(_searchTimer);
   _searchTimer=setTimeout(()=>{activeQ=q.toLowerCase().trim();applyFilters();},150);
+}
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+}
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();deferredPrompt=e;
+  document.getElementById('install-fab').style.display='flex';
+});
+function instalarApp(){
+  if(!deferredPrompt)return;
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('install-fab').style.display='none';});
 }
 function applyFilters(){
   document.getElementById('sort-sel').value = 'nuevos';
