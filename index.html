@@ -248,11 +248,29 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .ot-no{background:#1a1a1a;color:#444;border:1px solid #2a2a2a;border-radius:5px;padding:1px 5px;font-size:.6rem}
 .obtn{background:var(--wa);color:#fff;border-radius:10px;
   text-align:center;font-size:.7rem;font-weight:700;padding:6px 10px;text-decoration:none;flex-shrink:0}
+.flash{max-width:1400px;margin:10px auto 0;padding:0 14px}
+.flash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.flash-title{font-weight:900;color:var(--red);font-size:.85rem}
+.flash-timer{font-size:.7rem;color:var(--text2)}
+.flash-scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.fcard{position:relative;flex:0 0 110px;background:var(--bg3);border:1.5px solid var(--red);border-radius:12px;padding:6px;cursor:pointer;text-align:center}
+.fcard img{width:100%;height:80px;object-fit:contain}
+.fpct{position:absolute;top:4px;left:4px;background:var(--red);color:#fff;font-size:.6rem;font-weight:900;padding:2px 6px;border-radius:8px}
+.fprice{color:var(--red);font-weight:900;font-size:.9rem}
+.fold{color:var(--text2);text-decoration:line-through;font-size:.65rem}
+.sp-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9500;align-items:center;justify-content:center}
+.sp-overlay.on{display:flex}
+.sp-box{position:relative;background:var(--bg3);border:2px solid var(--red);border-radius:20px;padding:24px 20px;text-align:center;width:88%;max-width:340px}
+.sp-x{position:absolute;top:8px;right:12px;background:none;border:none;color:var(--text);font-size:1.3rem;cursor:pointer}
+.sp-tag{font-weight:900;color:var(--yellow);letter-spacing:1px}
+.sp-big{font-size:1rem;color:var(--text2);margin:8px 0}
+.sp-big span{display:block;font-size:3rem;font-weight:900;color:var(--red)}
+.sp-btn{background:var(--red);color:#fff;border:none;border-radius:20px;padding:12px 22px;font-weight:800;cursor:pointer;margin-top:10px}
 </style>
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 06/10/2026 11:03 · 166 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 06/10/2026 12:31 · 166 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -301,6 +319,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 <button class="fb" onclick="filtrar('TheNorthFace',this)">TheNorthFace</button>
 <button class="fb" onclick="filtrar('UNDER ARMOUR',this)">UNDER ARMOUR</button>
 </div>
+
 <div class="stats-bar">
   <span id="count-lbl">Mostrando <b>166</b> productos</span>
   <span style="color:var(--yellow)">🔥 Toca talla verde</span>
@@ -1026,19 +1045,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="ADIDAS" data-modelo="Adizero (running)" data-color="NEGRO" data-idx="45" data-precio="140.00" data-fecha="2026-07-21" data-stock="1" data-tallas="41">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg" alt="ADIDAS Adizero (running)" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg','ADIDAS Adizero (running)','NEGRO',140,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="ADIDAS" data-modelo="Adizero (running)" data-color="NEGRO" data-idx="45" data-precio="105.00" data-fecha="2026-07-21" data-stock="1" data-tallas="41">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg" alt="ADIDAS Adizero (running)" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg','ADIDAS Adizero (running)','NEGRO',105,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">ADIDAS</div>
     <div class="cmodelo">Adizero (running)</div>
     <div class="ccolor">🎨 NEGRO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ADIDAS%20Adizero (running)*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20140%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">41</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ADIDAS%20Adizero (running)*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20105%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">41</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 140</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('ADIDAS','Adizero (running)','NEGRO',140,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ADIDAS%20Adizero (running)*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%20140%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(140,'ADIDAS Adizero (running)')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 105</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('ADIDAS','Adizero (running)','NEGRO',105,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ADIDAS%20Adizero (running)*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%20105%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(105,'ADIDAS Adizero (running)')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -1378,67 +1397,67 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="BLANCO" data-idx="67" data-precio="95.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg','MIZUNO Digawel','BLANCO',95,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="BLANCO" data-idx="67" data-precio="70.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg','MIZUNO Digawel','BLANCO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">MIZUNO</div>
     <div class="cmodelo">Digawel</div>
     <div class="ccolor">🎨 BLANCO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2095%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 95</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','BLANCO',95,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2095%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(95,'MIZUNO Digawel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 70</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','BLANCO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2070%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(70,'MIZUNO Digawel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="BLANCO" data-idx="68" data-precio="95.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg','MIZUNO Digawel','BLANCO',95,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="BLANCO" data-idx="68" data-precio="70.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg','MIZUNO Digawel','BLANCO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">MIZUNO</div>
     <div class="cmodelo">Digawel</div>
     <div class="ccolor">🎨 BLANCO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2095%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 95</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','BLANCO',95,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2095%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(95,'MIZUNO Digawel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 70</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','BLANCO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2070%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(70,'MIZUNO Digawel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="BLANCO" data-idx="69" data-precio="90.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg','MIZUNO Digawel','BLANCO',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="BLANCO" data-idx="69" data-precio="70.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg','MIZUNO Digawel','BLANCO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">MIZUNO</div>
     <div class="cmodelo">Digawel</div>
     <div class="ccolor">🎨 BLANCO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2090%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 90</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','BLANCO',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2090%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(90,'MIZUNO Digawel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 70</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','BLANCO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2070%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(70,'MIZUNO Digawel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="NEGRO" data-idx="70" data-precio="90.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg','MIZUNO Digawel','NEGRO',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="MIZUNO" data-modelo="Digawel" data-color="NEGRO" data-idx="70" data-precio="70.00" data-fecha="2026-07-05" data-stock="1" data-tallas="40">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg" alt="MIZUNO Digawel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg','MIZUNO Digawel','NEGRO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">MIZUNO</div>
     <div class="cmodelo">Digawel</div>
     <div class="ccolor">🎨 NEGRO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2090%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 90</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','NEGRO',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%2090%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(90,'MIZUNO Digawel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 70</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('MIZUNO','Digawel','NEGRO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%2070%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(70,'MIZUNO Digawel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -1842,51 +1861,51 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="ASICS" data-modelo="Gel Kayano" data-color="BLANCO" data-idx="96" data-precio="85.00" data-fecha="2026-06-19" data-stock="1" data-tallas="40">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" alt="ASICS Gel Kayano" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg','ASICS Gel Kayano','BLANCO',85,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="ASICS" data-modelo="Gel Kayano" data-color="BLANCO" data-idx="96" data-precio="60.00" data-fecha="2026-06-19" data-stock="1" data-tallas="40">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" alt="ASICS Gel Kayano" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg','ASICS Gel Kayano','BLANCO',60,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">ASICS</div>
     <div class="cmodelo">Gel Kayano</div>
     <div class="ccolor">🎨 BLANCO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2085%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">40</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 85</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel Kayano','BLANCO',85,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2085%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(85,'ASICS Gel Kayano')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 60</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel Kayano','BLANCO',60,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2060%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(60,'ASICS Gel Kayano')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="HOKA" data-modelo="Siflon 9" data-color="GRIS" data-idx="97" data-precio="110.00" data-fecha="2026-06-19" data-stock="1" data-tallas="42">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg" alt="HOKA Siflon 9" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg','HOKA Siflon 9','GRIS',110,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="HOKA" data-modelo="Siflon 9" data-color="GRIS" data-idx="97" data-precio="75.00" data-fecha="2026-06-19" data-stock="1" data-tallas="42">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg" alt="HOKA Siflon 9" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg','HOKA Siflon 9','GRIS',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">HOKA</div>
     <div class="cmodelo">Siflon 9</div>
     <div class="ccolor">🎨 GRIS</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20GRIS%0A%F0%9F%93%8F%20Talla%3A%20*42*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20110%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">42</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20GRIS%0A%F0%9F%93%8F%20Talla%3A%20*42*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">42</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 110</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('HOKA','Siflon 9','GRIS',110,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20GRIS%0A%F0%9F%92%B0%20S%2F%20110%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(110,'HOKA Siflon 9')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 75</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('HOKA','Siflon 9','GRIS',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20GRIS%0A%F0%9F%92%B0%20S%2F%2075%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(75,'HOKA Siflon 9')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="HOKA" data-modelo="Siflon 9" data-color="BEIGE" data-idx="98" data-precio="110.00" data-fecha="2026-06-19" data-stock="1" data-tallas="42">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg" alt="HOKA Siflon 9" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg','HOKA Siflon 9','BEIGE',110,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="HOKA" data-modelo="Siflon 9" data-color="BEIGE" data-idx="98" data-precio="75.00" data-fecha="2026-06-19" data-stock="1" data-tallas="42">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg" alt="HOKA Siflon 9" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg','HOKA Siflon 9','BEIGE',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">HOKA</div>
     <div class="cmodelo">Siflon 9</div>
     <div class="ccolor">🎨 BEIGE</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*42*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20110%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">42</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*42*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">42</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 110</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('HOKA','Siflon 9','BEIGE',110,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20S%2F%20110%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(110,'HOKA Siflon 9')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 75</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('HOKA','Siflon 9','BEIGE',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20S%2F%2075%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(75,'HOKA Siflon 9')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -1938,19 +1957,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="JORDAN" data-modelo="Jordan 4 Retro" data-color="BLANCO" data-idx="102" data-precio="120.00" data-fecha="2026-06-19" data-stock="1" data-tallas="44">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg" alt="JORDAN Jordan 4 Retro" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg','JORDAN Jordan 4 Retro','BLANCO',120,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="JORDAN" data-modelo="Jordan 4 Retro" data-color="BLANCO" data-idx="102" data-precio="80.00" data-fecha="2026-06-19" data-stock="1" data-tallas="44">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg" alt="JORDAN Jordan 4 Retro" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg','JORDAN Jordan 4 Retro','BLANCO',80,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">JORDAN</div>
     <div class="cmodelo">Jordan 4 Retro</div>
     <div class="ccolor">🎨 BLANCO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*JORDAN%20Jordan 4 Retro*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*44*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20120%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">44</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*JORDAN%20Jordan 4 Retro*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*44*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">44</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 120</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('JORDAN','Jordan 4 Retro','BLANCO',120,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*JORDAN%20Jordan 4 Retro*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%20120%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(120,'JORDAN Jordan 4 Retro')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 80</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('JORDAN','Jordan 4 Retro','BLANCO',80,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*JORDAN%20Jordan 4 Retro*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2080%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(80,'JORDAN Jordan 4 Retro')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -1986,35 +2005,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="ASICS" data-modelo="Gel" data-color="BLANCO" data-idx="105" data-precio="95.00" data-fecha="2026-06-19" data-stock="2" data-tallas="41,43">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg" alt="ASICS Gel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg','ASICS Gel','BLANCO',95,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg')"><div class="badge-low">¡Solo 2!</div></div>
+<div class="card card-low" data-marca="ASICS" data-modelo="Gel" data-color="BLANCO" data-idx="105" data-precio="75.00" data-fecha="2026-06-19" data-stock="2" data-tallas="41,43">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg" alt="ASICS Gel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg','ASICS Gel','BLANCO',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg')"><div class="badge-low">¡Solo 2!</div></div>
   <div class="cinfo">
     <div class="cmarca">ASICS</div>
     <div class="cmodelo">Gel</div>
     <div class="ccolor">🎨 BLANCO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2095%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">41</a><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2095%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">41</a><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 95</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel','BLANCO',95,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2095%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(95,'ASICS Gel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 75</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel','BLANCO',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20S%2F%2075%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(75,'ASICS Gel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="LOUIS VUITTON" data-modelo="Lond kuttos" data-color="VERDE" data-idx="106" data-precio="130.00" data-fecha="2026-06-19" data-stock="1" data-tallas="45">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg" alt="LOUIS VUITTON Lond kuttos" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg','LOUIS VUITTON Lond kuttos','VERDE',130,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="LOUIS VUITTON" data-modelo="Lond kuttos" data-color="VERDE" data-idx="106" data-precio="80.00" data-fecha="2026-06-19" data-stock="1" data-tallas="45">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg" alt="LOUIS VUITTON Lond kuttos" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg','LOUIS VUITTON Lond kuttos','VERDE',80,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">LOUIS VUITTON</div>
     <div class="cmodelo">Lond kuttos</div>
     <div class="ccolor">🎨 VERDE</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*LOUIS VUITTON%20Lond kuttos*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%93%8F%20Talla%3A%20*45*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20130%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">45</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*LOUIS VUITTON%20Lond kuttos*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%93%8F%20Talla%3A%20*45*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">45</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 130</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('LOUIS VUITTON','Lond kuttos','VERDE',130,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*LOUIS VUITTON%20Lond kuttos*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%92%B0%20S%2F%20130%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(130,'LOUIS VUITTON Lond kuttos')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 80</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('LOUIS VUITTON','Lond kuttos','VERDE',80,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*LOUIS VUITTON%20Lond kuttos*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%92%B0%20S%2F%2080%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(80,'LOUIS VUITTON Lond kuttos')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -2082,19 +2101,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="ASICS" data-modelo="Gel" data-color="AZUL" data-idx="111" data-precio="90.00" data-fecha="2026-06-19" data-stock="1" data-tallas="43">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg" alt="ASICS Gel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg','ASICS Gel','AZUL',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="ASICS" data-modelo="Gel" data-color="AZUL" data-idx="111" data-precio="75.00" data-fecha="2026-06-19" data-stock="1" data-tallas="43">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg" alt="ASICS Gel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg','ASICS Gel','AZUL',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">ASICS</div>
     <div class="cmodelo">Gel</div>
     <div class="ccolor">🎨 AZUL</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20AZUL%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2090%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20AZUL%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 90</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel','AZUL',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20AZUL%0A%F0%9F%92%B0%20S%2F%2090%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(90,'ASICS Gel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 75</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel','AZUL',75,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20AZUL%0A%F0%9F%92%B0%20S%2F%2075%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(75,'ASICS Gel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -2402,19 +2421,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="NIKE" data-modelo="Air Force 1 &#39;07" data-color="BEIGE" data-idx="131" data-precio="85.00" data-fecha="2026-06-17" data-stock="1" data-tallas="38">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg" alt="NIKE Air Force 1 &#39;07" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg','NIKE Air Force 1 &#39;07','BEIGE',85,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="NIKE" data-modelo="Air Force 1 &#39;07" data-color="BEIGE" data-idx="131" data-precio="60.00" data-fecha="2026-06-17" data-stock="1" data-tallas="38">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg" alt="NIKE Air Force 1 &#39;07" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg','NIKE Air Force 1 &#39;07','BEIGE',60,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">NIKE</div>
     <div class="cmodelo">Air Force 1 &#39;07</div>
     <div class="ccolor">🎨 BEIGE</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*38*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2085%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">38</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*38*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">38</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 85</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('NIKE','Air Force 1 &#39;07','BEIGE',85,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20S%2F%2085%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(85,'NIKE Air Force 1 &#39;07')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 60</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('NIKE','Air Force 1 &#39;07','BEIGE',60,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20S%2F%2060%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(60,'NIKE Air Force 1 &#39;07')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -2754,19 +2773,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="GUCCI" data-modelo="Run" data-color="BEIGE" data-idx="153" data-precio="80.00" data-fecha="" data-stock="1" data-tallas="36">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg" alt="GUCCI Run" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg','GUCCI Run','BEIGE',80,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="GUCCI" data-modelo="Run" data-color="BEIGE" data-idx="153" data-precio="45.00" data-fecha="" data-stock="1" data-tallas="36">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg" alt="GUCCI Run" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg','GUCCI Run','BEIGE',45,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">GUCCI</div>
     <div class="cmodelo">Run</div>
     <div class="ccolor">🎨 BEIGE</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*36*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">36</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*36*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2045%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">36</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 80</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('GUCCI','Run','BEIGE',80,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20S%2F%2080%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(80,'GUCCI Run')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 45</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('GUCCI','Run','BEIGE',45,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20S%2F%2045%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(45,'GUCCI Run')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -3206,6 +3225,170 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div></div>
       </div>
     </div>
+
+    <div class="cart-modal" id="ofertas-modal" onclick="if(event.target===this)closeOfertas()">
+      <div class="cart-inner">
+        <div class="cart-handle"></div>
+        <div class="cart-title">🔥 Ofertas del momento</div>
+        <div class="ofertas-scroll-modal">
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg" class="oimg" alt="ADIDAS Adizero (running)">
+      <div class="oinfo">
+        <div class="onombre">ADIDAS Adizero (running)</div>
+        <div class="ocolor">🎨 NEGRO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 140</span> <span class="oprecio">S/ 105</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ADIDAS%20Adizero (running)*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20105%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">41</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ADIDAS%20Adizero (running)*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%20105%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_33523.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg" class="oimg" alt="MIZUNO Digawel">
+      <div class="oinfo">
+        <div class="onombre">MIZUNO Digawel</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 95</span> <span class="oprecio">S/ 70</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_96180.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg" class="oimg" alt="MIZUNO Digawel">
+      <div class="oinfo">
+        <div class="onombre">MIZUNO Digawel</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 95</span> <span class="oprecio">S/ 70</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_15309.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg" class="oimg" alt="MIZUNO Digawel">
+      <div class="oinfo">
+        <div class="onombre">MIZUNO Digawel</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 90</span> <span class="oprecio">S/ 70</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_26585.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg" class="oimg" alt="MIZUNO Digawel">
+      <div class="oinfo">
+        <div class="onombre">MIZUNO Digawel</div>
+        <div class="ocolor">🎨 NEGRO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 90</span> <span class="oprecio">S/ 70</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" class="oimg" alt="ASICS Gel Kayano">
+      <div class="oinfo">
+        <div class="onombre">ASICS Gel Kayano</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 85</span> <span class="oprecio">S/ 60</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg" class="oimg" alt="HOKA Siflon 9">
+      <div class="oinfo">
+        <div class="onombre">HOKA Siflon 9</div>
+        <div class="ocolor">🎨 GRIS</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 110</span> <span class="oprecio">S/ 75</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20GRIS%0A%F0%9F%93%8F%20Talla%3A%20*42*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">42</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20GRIS%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg" class="oimg" alt="HOKA Siflon 9">
+      <div class="oinfo">
+        <div class="onombre">HOKA Siflon 9</div>
+        <div class="ocolor">🎨 BEIGE</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 110</span> <span class="oprecio">S/ 75</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*42*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">42</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*HOKA%20Siflon 9*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39586.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg" class="oimg" alt="JORDAN Jordan 4 Retro">
+      <div class="oinfo">
+        <div class="onombre">JORDAN Jordan 4 Retro</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 120</span> <span class="oprecio">S/ 80</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*JORDAN%20Jordan 4 Retro*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*44*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">44</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*JORDAN%20Jordan 4 Retro*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27106.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg" class="oimg" alt="ASICS Gel">
+      <div class="oinfo">
+        <div class="onombre">ASICS Gel</div>
+        <div class="ocolor">🎨 BLANCO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 95</span> <span class="oprecio">S/ 75</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">41</a><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">43</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_71366.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg" class="oimg" alt="LOUIS VUITTON Lond kuttos">
+      <div class="oinfo">
+        <div class="onombre">LOUIS VUITTON Lond kuttos</div>
+        <div class="ocolor">🎨 VERDE</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 130</span> <span class="oprecio">S/ 80</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*LOUIS VUITTON%20Lond kuttos*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%93%8F%20Talla%3A%20*45*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">45</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*LOUIS VUITTON%20Lond kuttos*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2080%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_62721.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg" class="oimg" alt="ASICS Gel">
+      <div class="oinfo">
+        <div class="onombre">ASICS Gel</div>
+        <div class="ocolor">🎨 AZUL</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 90</span> <span class="oprecio">S/ 75</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20AZUL%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">43</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20AZUL%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2075%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_39793.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg" class="oimg" alt="NIKE Air Force 1 &#39;07">
+      <div class="oinfo">
+        <div class="onombre">NIKE Air Force 1 &#39;07</div>
+        <div class="ocolor">🎨 BEIGE</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 85</span> <span class="oprecio">S/ 60</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*38*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">38</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg" class="oimg" alt="GUCCI Run">
+      <div class="oinfo">
+        <div class="onombre">GUCCI Run</div>
+        <div class="ocolor">🎨 BEIGE</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 80</span> <span class="oprecio">S/ 45</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%93%8F%20Talla%3A%20*36*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2045%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">36</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2045%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div></div>
+      </div>
+    </div>
+
+<div id="toast"></div>
 <div id="toast"></div>
 <script>
 const WA="51958780838",NOMBRE="EXOSNEAKER";
@@ -3374,7 +3557,7 @@ function confirmarYapePorWA(){
   const concepto=yapeData.concepto||'';
   let msg='Hola!%20Acabo%20de%20YAPEAR%20S%2F%20'+monto;
   if(concepto)msg+='%20por%3A%20'+encodeURIComponent(concepto);
-  msg+('%0AAdjunto%20mi%20comprobante%20%F0%9F%93%B8%2C%20%C2%BFpodr%C3%ADan%20confirmar%20mi%20pedido%3F');
+  msg+='%0AAdjunto%20mi%20comprobante%20%F0%9F%93%B8%2C%20%C2%BFpodr%C3%ADan%20confirmar%20mi%20pedido%3F';   // ← aquí: msg+=
   window.open('https://wa.me/'+WA+'?text='+msg,'_blank');
   closeYape();
 }
@@ -3409,6 +3592,19 @@ function showToast(msg){const t=document.getElementById('toast');t.textContent=m
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}})},{threshold:0.05});
 document.querySelectorAll('.card').forEach(c=>obs.observe(c));
 setTimeout(()=>{const b=document.getElementById('camp-bar');if(b)b.style.cssText='height:0;overflow:hidden;padding:0;transition:all .5s';},5000);
+function closeSuper(){document.getElementById('sp-overlay').classList.remove('on');}
+function tickTimers(){
+  const end=new Date();end.setHours(23,59,59,999);
+  const s=Math.max(0,Math.floor((end-new Date())/1000));
+  const t=[Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(n=>String(n).padStart(2,'0')).join(':');
+  ['flash-timer','sp-timer'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=t;});
+}
+setInterval(tickTimers,1000);tickTimers();
+try{
+  if(document.getElementById('sp-overlay')&&!sessionStorage.getItem('exo-sp')){
+    setTimeout(()=>{document.getElementById('sp-overlay').classList.add('on');sessionStorage.setItem('exo-sp','1');},1200);
+  }
+}catch(e){}
 applyFilters();
 </script>
 </body>
