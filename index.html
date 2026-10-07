@@ -301,34 +301,56 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .sp-tag{font-weight:900;font-size:1.05rem;color:#ffd740;letter-spacing:2px;
   text-shadow:0 2px 0 #b71c1c;animation:shake 1.4s infinite}
 @keyframes shake{0%,100%{transform:rotate(0)}10%,30%{transform:rotate(-5deg)}20%,40%{transform:rotate(5deg)}50%{transform:rotate(0)}}
-.sp-pimgs{display:flex;justify-content:center;gap:6px;margin:12px 0 4px;min-height:80px}
-.sp-pimg{width:30%;max-width:92px;height:80px;object-fit:contain;background:#fff;border-radius:12px;
-  padding:4px;box-shadow:0 4px 12px rgba(0,0,0,.4);
-  animation:floaty 2s calc(var(--k)*.3s) ease-in-out infinite}
-@keyframes floaty{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(3deg)}}
-.sp-big{font-size:1.1rem;font-weight:800;margin:2px 0}
-.sp-big span{display:block;font-size:4rem;line-height:1;font-weight:900;color:#ffd740;
-  text-shadow:0 4px 0 #b71c1c,0 0 25px rgba(255,215,64,.9);animation:beat 1s infinite}
-.sp-sub{font-size:.8rem;opacity:.95}
-.sp-timer{margin:8px auto;display:inline-block;background:rgba(0,0,0,.4);padding:5px 12px;
-  border-radius:14px;font-size:.78rem}
-.sp-timer b{color:#ffd740;font-variant-numeric:tabular-nums}
-.sp-btn{position:relative;overflow:hidden;display:block;width:100%;margin-top:6px;border:none;
-  border-radius:30px;padding:14px;font-size:1rem;font-weight:900;cursor:pointer;
-  background:linear-gradient(180deg,#ffe766,#ffb300);color:#b71c1c;
-  box-shadow:0 5px 0 #b77900;animation:beat 1s infinite}
-.sp-btn::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.9),transparent);
-  transform:skewX(-20deg);animation:shine 1.8s infinite}
-.sp-hurry{font-size:.68rem;margin-top:9px;font-weight:700;animation:blink 1s infinite}
 
-/* Botón flotante de ofertas */
-.ofertas-fab{animation:beat 1.2s infinite;background:linear-gradient(135deg,#ff1744,#ff6d00)!important}
+/* ===== Mejoras súper oferta ===== */
+.sp-hero{position:relative;height:200px;margin:10px 0 4px}
+.sp-hero::before{content:'';position:absolute;left:50%;top:45%;width:200px;height:200px;
+  margin:-100px 0 0 -100px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.7),rgba(255,215,64,.35) 55%,transparent 70%);
+  animation:beat 1.6s infinite}
+.sp-slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;opacity:0;transform:translateX(70px) scale(.6) rotate(14deg);
+  transition:all .6s cubic-bezier(.2,1.3,.4,1);pointer-events:none}
+.sp-slide.on{opacity:1;transform:none}
+.sp-slide img{width:160px;height:120px;object-fit:contain;background:#fff;border-radius:18px;
+  padding:6px;box-shadow:0 10px 22px rgba(0,0,0,.45);animation:shoe 2.4s ease-in-out infinite}
+@keyframes shoe{0%,100%{transform:translateY(0) rotate(-6deg) scale(1)}
+  50%{transform:translateY(-12px) rotate(6deg) scale(1.08)}}
+.sp-name{font-weight:900;font-size:.85rem;margin-top:8px;max-width:100%;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.sp-prices{font-size:.9rem;margin-top:3px}
+.sp-prices s{opacity:.8;margin-right:6px}
+.sp-prices b{background:#ffd740;color:#b71c1c;padding:2px 11px;border-radius:12px;font-size:1.05rem}
+.sp-count{display:flex;justify-content:center;gap:6px;margin:8px 0 4px}
+.sp-count div{background:#000;border-radius:9px;padding:5px 8px;min-width:48px}
+.sp-count b{display:block;font-size:1.3rem;color:#ffd740;font-variant-numeric:tabular-nums}
+.sp-count small{font-size:.5rem;opacity:.8;letter-spacing:1px}
+.sp-stock{font-size:.76rem;font-weight:800;margin:4px 0;animation:blink 1.2s infinite}
+.fcard img{animation:fshoe 2.2s ease-in-out infinite}
+@keyframes fshoe{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-5px) rotate(4deg) scale(1.06)}}
+.fname{font-size:.6rem;font-weight:700;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-pimgs{display:flex;justify-content:center;gap:8px;margin:12px 0 4px}
+.sp-pimg{width:84px;height:84px;object-fit:contain;background:#fff;border-radius:14px;
+  padding:4px;box-shadow:0 8px 18px rgba(0,0,0,.4);
+  animation:shoe 2.4s ease-in-out infinite;animation-delay:calc(var(--k)*.3s)}
+.sp-big{font-size:.9rem;font-weight:800;margin:6px 0 0}
+.sp-big span{display:block;font-size:3.4rem;font-weight:900;color:#ffd740;
+  line-height:1;text-shadow:0 3px 0 #b71c1c}
+.sp-sub{font-size:.8rem;margin:4px 0}
+.sp-timer{font-size:.8rem;margin:6px 0}
+.sp-timer b{background:#000;color:#ffd740;padding:3px 9px;border-radius:7px;
+  font-variant-numeric:tabular-nums}
+.sp-btn{display:block;width:100%;margin-top:10px;background:#ffd740;color:#b71c1c;
+  border:none;border-radius:14px;padding:13px;font-size:.95rem;font-weight:900;cursor:pointer}
+.sp-hurry{font-size:.68rem;margin-top:8px;opacity:.9}
+@media(prefers-reduced-motion:reduce){
+  .sp-slide img,.fcard,.fcard img,.sp-rays,.sp-box{animation:none}
+}
 </style>
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 07/10/2026 09:57 · 166 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 07/10/2026 11:08 · 166 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -384,9 +406,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     <div class="flash-timer">Termina en <b id="flash-timer">--:--:--</b></div>
   </div>
   <div class="flash-scroll">
-<div class="fcard" onclick="openOfertas()">
+<div class="fcard" data-fin="2026-10-07T15:07" onclick="openOfertas()">
+  <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" alt="ASICS Gel Kayano" loading="lazy">
+  
+  <div class="fname">ASICS Gel Kayano</div>
+  <div class="fprice">S/ 60</div>
+  
+</div>
+<div class="fcard" data-fin="" onclick="openOfertas()">
   <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" alt="ASICS Gel" loading="lazy">
   <span class="fpct">-18%</span>
+  <div class="fname">ASICS Gel</div>
   <div class="fprice">S/ 70</div>
   <div class="fold">S/ 85</div>
 </div></div>
@@ -3200,7 +3230,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
       <div class="oinfo">
         <div class="onombre">ASICS Gel Kayano</div>
         <div class="ocolor">🎨 BLANCO</div>
-        <div class="oprecio-row"><span class="oprecio-old">S/ 85</span> <span class="oprecio">S/ 60</span></div>
+        <div class="oprecio-row"><span class="oprecio">S/ 60</span></div>
         <div class="otallas-lbl">📏 Toca tu talla</div>
         <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
       </div>
@@ -3314,9 +3344,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     <div class="sp-rays"></div>
     <button class="sp-x" onclick="closeSuper()">✕</button>
     <div class="sp-tag">⚡ SÚPER OFERTA ⚡</div>
-    <div class="sp-pimgs"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" class="sp-pimg" style="--k:0" alt=""></div>
+    <div class="sp-pimgs"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" class="sp-pimg" style="--k:0" alt=""><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" class="sp-pimg" style="--k:1" alt=""></div>
     <div class="sp-big">HASTA<span id="sp-num" data-pct="18">-18%</span></div>
-    <div class="sp-sub">1 zapatillas en súper oferta</div>
+    <div class="sp-sub">2 zapatillas en súper oferta</div>
     <div class="sp-timer">⏰ Termina en <b id="sp-timer">--:--:--</b></div>
     <button class="sp-btn" onclick="closeSuper();openOfertas()">🔥 VER OFERTAS 🔥</button>
     <div class="sp-hurry">¡Stock limitado, se agotan rápido!</div>
@@ -3525,10 +3555,26 @@ function showToast(msg){const t=document.getElementById('toast');t.textContent=m
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}})},{threshold:0.05});
 document.querySelectorAll('.card').forEach(c=>obs.observe(c));
 setTimeout(()=>{const b=document.getElementById('camp-bar');if(b)b.style.cssText='height:0;overflow:hidden;padding:0;transition:all .5s';},5000);
-function closeSuper(){document.getElementById('sp-overlay').classList.remove('on');}
+
+let spIdx=0,spTimer=null;
+function closeSuper(){
+  const o=document.getElementById('sp-overlay');if(o)o.classList.remove('on');
+  clearInterval(spTimer);
+}
+function spSlides(){
+  const sl=document.querySelectorAll('.sp-slide');
+  clearInterval(spTimer);
+  if(sl.length<2)return;
+  spTimer=setInterval(()=>{
+    sl[spIdx].classList.remove('on');
+    spIdx=(spIdx+1)%sl.length;
+    sl[spIdx].classList.add('on');
+  },2600);
+}
 function spFx(){
   const c=document.getElementById('sp-confetti');
-  if(c&&!c.children.length){
+  if(c){
+    c.innerHTML='';
     const cols=['#ff1744','#ffd740','#ffffff','#00e676','#2196f3','#ff9800'];
     for(let i=0;i<50;i++){
       const e=document.createElement('i');
@@ -3556,15 +3602,53 @@ function spFx(){
 function showSuper(){
   const o=document.getElementById('sp-overlay');
   if(!o)return;
-  o.classList.add('on');spFx();
+  o.classList.add('on');spFx();spSlides();
+}
+function finActual(){
+  let min=null;
+  document.querySelectorAll('.fcard').forEach(c=>{
+    const d=c.dataset.fin?new Date(c.dataset.fin):null;
+    if(d&&!isNaN(d)&&(!min||d<min))min=d;
+  });
+  if(min)return min;
+  const e=new Date();e.setHours(23,59,59,999);return e;
 }
 function tickTimers(){
-  const end=new Date();end.setHours(23,59,59,999);
-  const s=Math.max(0,Math.floor((end-new Date())/1000));
-  const t=[Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(n=>String(n).padStart(2,'0')).join(':');
-  ['flash-timer','sp-timer'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=t;});
+  const now=new Date();
+  document.querySelectorAll('.fcard').forEach(c=>{
+    const d=c.dataset.fin?new Date(c.dataset.fin):null;
+    if(d&&!isNaN(d)&&d<=now)c.remove();
+  });
+  if(!document.querySelector('.fcard')){
+    document.querySelectorAll('.flash,#sp-overlay').forEach(e=>e.remove());
+    return;
+  }
+  const s=Math.max(0,Math.floor((finActual()-now)/1000));
+  const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),sec=s%60;
+  const p2=n=>String(n).padStart(2,'0');
+  const txt=(d>0?d+'d ':'')+p2(h)+':'+p2(m)+':'+p2(sec);
+  const ft=document.getElementById('flash-timer');
+  if(ft)ft.textContent=txt;
+  const st=document.getElementById('sp-timer');
+  if(st)st.textContent=txt;
+  if(ft)ft.textContent=(d>0?d+'d ':'')+p2(h)+':'+p2(m)+':'+p2(sec);
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('sp-d',p2(d));set('sp-h',p2(h));set('sp-m',p2(m));set('sp-s',p2(sec));
+  const bd=document.getElementById('sp-dbox');if(bd)bd.style.display=d>0?'':'none';
 }
 setInterval(tickTimers,1000);tickTimers();
+(function(){
+  const sc=document.querySelector('.flash-scroll');if(!sc)return;
+  let dir=1,pause=false;
+  sc.addEventListener('touchstart',()=>pause=true,{passive:true});
+  sc.addEventListener('touchend',()=>setTimeout(()=>pause=false,2500));
+  setInterval(()=>{
+    if(pause||sc.scrollWidth<=sc.clientWidth)return;
+    sc.scrollLeft+=dir;
+    if(sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-1)dir=-1;
+    if(sc.scrollLeft<=0)dir=1;
+  },30);
+})();
 try{
   if(document.getElementById('sp-overlay')&&!sessionStorage.getItem('exo-sp')){
     setTimeout(()=>{showSuper();sessionStorage.setItem('exo-sp','1');},1200);
