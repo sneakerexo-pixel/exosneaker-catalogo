@@ -355,47 +355,41 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .sp-hurry{margin-top:10px;display:inline-block;padding:5px 14px;border-radius:14px;
   background:rgba(0,0,0,.45);font-size:.72rem}
 
-/* ===== Mejoras súper oferta ===== */
-.sp-hero{position:relative;height:200px;margin:10px 0 4px}
-.sp-hero::before{content:'';position:absolute;left:50%;top:45%;width:200px;height:200px;
-  margin:-100px 0 0 -100px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,255,255,.7),rgba(255,215,64,.35) 55%,transparent 70%);
-  animation:beat 1.6s infinite}
-.sp-slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;opacity:0;transform:translateX(70px) scale(.6) rotate(14deg);
-  transition:all .6s cubic-bezier(.2,1.3,.4,1);pointer-events:none}
-.sp-slide.on{opacity:1;transform:none}
-.sp-slide img{width:160px;height:120px;object-fit:contain;background:#fff;border-radius:18px;
-  padding:6px;box-shadow:0 10px 22px rgba(0,0,0,.45);animation:shoe 2.4s ease-in-out infinite}
-@keyframes shoe{0%,100%{transform:translateY(0) rotate(-6deg) scale(1)}
-  50%{transform:translateY(-12px) rotate(6deg) scale(1.08)}}
-.sp-name{font-weight:900;font-size:.85rem;margin-top:8px;max-width:100%;white-space:nowrap;
-  overflow:hidden;text-overflow:ellipsis;text-shadow:0 2px 0 rgba(0,0,0,.35)}
-.sp-prices{font-size:.9rem;margin-top:3px}
-.sp-prices s{opacity:.8;margin-right:6px}
-.sp-prices b{background:#ffd740;color:#b71c1c;padding:2px 11px;border-radius:12px;font-size:1.05rem}
-.sp-count{display:flex;justify-content:center;gap:6px;margin:8px 0 4px}
-.sp-count div{background:#000;border-radius:9px;padding:5px 8px;min-width:48px}
-.sp-count b{display:block;font-size:1.3rem;color:#ffd740;font-variant-numeric:tabular-nums}
-.sp-count small{font-size:.5rem;opacity:.8;letter-spacing:1px}
-.sp-stock{font-size:.76rem;font-weight:800;margin:4px 0;animation:blink 1.2s infinite}
 .fcard img{animation:fshoe 2.2s ease-in-out infinite}
 @keyframes fshoe{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-5px) rotate(4deg) scale(1.06)}}
 .fname{font-size:.6rem;font-weight:700;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sp-pimgs{display:flex;justify-content:center;gap:8px;margin:12px 0 4px}
-.sp-pimg{width:84px;height:84px;object-fit:contain;background:#fff;border-radius:14px;
-  padding:4px;box-shadow:0 8px 18px rgba(0,0,0,.4);
-  animation:shoe 2.4s ease-in-out infinite;animation-delay:calc(var(--k)*.3s)}
-.sp-big{font-size:.9rem;font-weight:800;margin:6px 0 0}
-.sp-big span{display:block;font-size:3.4rem;font-weight:900;color:#ffd740;
-  line-height:1;text-shadow:0 3px 0 #b71c1c}
-.sp-sub{font-size:.8rem;margin:4px 0}
-.sp-timer{font-size:.8rem;margin:6px 0}
-.sp-timer b{background:#000;color:#ffd740;padding:3px 9px;border-radius:7px;
-  font-variant-numeric:tabular-nums}
-.sp-btn{display:block;width:100%;margin-top:10px;background:#ffd740;color:#b71c1c;
-  border:none;border-radius:14px;padding:13px;font-size:.95rem;font-weight:900;cursor:pointer}
-.sp-hurry{font-size:.68rem;margin-top:8px;opacity:.9}
+/* ===== SUPER OFERTA NIVEL 2 ===== */
+.sp-slides{height:500px}
+.sp-stage{width:215px;height:215px;transition:transform .15s ease-out;transform-style:preserve-3d}
+.sp-shoe{width:185px;height:185px}
+.sp-rays{position:absolute;inset:-35%;border-radius:50%;
+  background:repeating-conic-gradient(rgba(255,220,120,.4) 0 8deg,transparent 8deg 20deg);
+  -webkit-mask:radial-gradient(circle,#000 25%,transparent 68%);
+  mask:radial-gradient(circle,#000 25%,transparent 68%);
+  animation:spin 14s linear infinite reverse}
+.sp-slide.on .sp-stage::before{content:'';position:absolute;inset:10%;border-radius:50%;
+  border:3px solid #ffd740;z-index:1;animation:shock 1s ease-out}
+@keyframes shock{from{transform:scale(.3);opacity:1}to{transform:scale(1.8);opacity:0}}
+.sp-sparks u{position:absolute;left:50%;top:40%;width:7px;height:7px;border-radius:50%;
+  text-decoration:none;animation:burst .9s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(0);opacity:0}}
+.sp-tallas-box{margin-top:8px;padding:6px 10px 9px;width:100%;border-radius:12px;
+  background:rgba(0,0,0,.38);border:1px solid rgba(255,215,64,.55)}
+.sp-tallas-lbl{font-size:.58rem;letter-spacing:2px;color:#ffd740;font-weight:800;margin-bottom:5px}
+.sp-tallas{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
+.sp-talla{min-width:36px;padding:6px 9px;border-radius:9px;border:1.5px solid #ffd740;
+  background:rgba(255,215,64,.12);color:#fff;font-weight:900;font-size:.85rem;
+  cursor:pointer;font-family:inherit;transition:transform .15s,background .15s,box-shadow .15s}
+.sp-slide.on .sp-talla{animation:chipIn .45s cubic-bezier(.2,1.6,.4,1) backwards;
+  animation-delay:calc(var(--i)*.06s + .35s)}
+@keyframes chipIn{from{transform:scale(0) rotate(-90deg);opacity:0}to{transform:none;opacity:1}}
+.sp-talla.sel{background:#ffd740;color:#b71c1c;transform:scale(1.18);box-shadow:0 0 16px #ffd740}
+.sp-bar{width:80%;height:7px;border-radius:6px;background:rgba(255,255,255,.2);overflow:hidden;margin-top:5px}
+.sp-bar i{display:block;height:100%;border-radius:6px;
+  background:linear-gradient(90deg,#ffd740,#ff1744);animation:barIn 1.2s ease-out}
+@keyframes barIn{from{width:0}}
+.sp-btn{animation:btnP 1.3s ease-in-out infinite,wob 3s ease-in-out infinite}
+@keyframes wob{0%,84%,100%{rotate:0deg}88%{rotate:-3deg}92%{rotate:3deg}96%{rotate:-2deg}}
 @media(prefers-reduced-motion:reduce){
   .sp-shoe,.sp-glow,.sp-ring,.sp-btn,.sp-plate,.sp-badge,.fcard,.fcard img,.sp-box{animation:none}
 }
@@ -403,7 +397,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 09/10/2026 11:16 · 166 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 09/10/2026 11:52 · 166 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -459,12 +453,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     <div class="flash-timer">⏰ <b id="flash-timer">--:--:--</b></div>
   </div>
   <div class="flash-scroll">
-<div class="fcard" data-fin="2026-10-09T11:25" onclick="openOfertas()">
-  <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" alt="ASICS Gel" loading="lazy">
-  <span class="fpct">-18%</span>
-  <div class="fname">ASICS Gel</div>
-  <div class="fprice">S/ 70</div>
-  <div class="fold">S/ 85</div>
+<div class="fcard" data-fin="2026-10-09T15:20" onclick="openOfertas()">
+  <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg" alt="NIKE Air Force 1 &#39;07" loading="lazy">
+  <span class="fpct">-28%</span>
+  <div class="fname">NIKE Air Force 1 &#39;07</div>
+  <div class="fprice">S/ 65</div>
+  <div class="fold">S/ 90</div>
+</div>
+<div class="fcard" data-fin="2026-10-09T15:00" onclick="openOfertas()">
+  <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg" alt="NIKE Tempo" loading="lazy">
+  <span class="fpct">-29%</span>
+  <div class="fname">NIKE Tempo</div>
+  <div class="fprice">S/ 50</div>
+  <div class="fold">S/ 70</div>
 </div></div>
 </div>
 <div class="stats-bar">
@@ -2760,19 +2761,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="NIKE" data-modelo="Air Force 1 &#39;07" data-color="NEGRO" data-idx="143" data-precio="90.00" data-fecha="" data-stock="3" data-tallas="41,43,44">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg" alt="NIKE Air Force 1 &#39;07" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg','NIKE Air Force 1 &#39;07','NEGRO',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg')"><div class="badge-low">¡Solo 3!</div></div>
+<div class="card card-low" data-marca="NIKE" data-modelo="Air Force 1 &#39;07" data-color="NEGRO" data-idx="143" data-precio="65.00" data-fecha="" data-stock="3" data-tallas="41,43,44">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg" alt="NIKE Air Force 1 &#39;07" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg','NIKE Air Force 1 &#39;07','NEGRO',65,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg')"><div class="badge-low">¡Solo 3!</div></div>
   <div class="cinfo">
     <div class="cmarca">NIKE</div>
     <div class="cmodelo">Air Force 1 &#39;07</div>
     <div class="ccolor">🎨 NEGRO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2090%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">41</a><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2090%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*44*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2090%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">44</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">41</a><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*44*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">44</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 90</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('NIKE','Air Force 1 &#39;07','NEGRO',90,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%2090%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(90,'NIKE Air Force 1 &#39;07')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 65</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('NIKE','Air Force 1 &#39;07','NEGRO',65,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%2065%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(65,'NIKE Air Force 1 &#39;07')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -2936,19 +2937,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="NIKE" data-modelo="Tempo" data-color="NEGRO" data-idx="154" data-precio="70.00" data-fecha="" data-stock="1" data-tallas="38">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg" alt="NIKE Tempo" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg','NIKE Tempo','NEGRO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="NIKE" data-modelo="Tempo" data-color="NEGRO" data-idx="154" data-precio="50.00" data-fecha="" data-stock="1" data-tallas="38">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg" alt="NIKE Tempo" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg','NIKE Tempo','NEGRO',50,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">NIKE</div>
     <div class="cmodelo">Tempo</div>
     <div class="ccolor">🎨 NEGRO</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Tempo*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*38*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">38</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Tempo*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*38*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2050%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">38</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 70</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('NIKE','Tempo','NEGRO',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Tempo*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%2070%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(70,'NIKE Tempo')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 50</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('NIKE','Tempo','NEGRO',50,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*NIKE%20Tempo*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20S%2F%2050%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(50,'NIKE Tempo')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -2968,19 +2969,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     </div>
   </div>
 </div>
-<div class="card card-low" data-marca="ASICS" data-modelo="Gel" data-color="VERDE" data-idx="156" data-precio="70.00" data-fecha="" data-stock="1" data-tallas="43">
-  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" alt="ASICS Gel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg','ASICS Gel','VERDE',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg')"><div class="badge-low">¡Solo 1!</div></div>
+<div class="card card-low" data-marca="ASICS" data-modelo="Gel" data-color="VERDE" data-idx="156" data-precio="85.00" data-fecha="" data-stock="1" data-tallas="43">
+  <div class="cimg-wrap"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" alt="ASICS Gel" class="cimg" loading="lazy" onclick="openLb('https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg','ASICS Gel','VERDE',85,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg')"><div class="badge-low">¡Solo 1!</div></div>
   <div class="cinfo">
     <div class="cmarca">ASICS</div>
     <div class="cmodelo">Gel</div>
     <div class="ccolor">🎨 VERDE</div>
     <div class="ctallas-box">
       <div class="ctallas-lbl">📏 Toca tu talla para pedir</div>
-      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a></div>
+      <div class="ctallas"><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2085%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg%0A%C2%BFEst%C3%A1%20disponible%3F" target="_blank" class="t-ok t-click">43</a></div>
     </div>
     <div class="cbottom">
-      <div class="cprecio">S/ 70</div>
-      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel','VERDE',70,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%92%B0%20S%2F%2070%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(70,'ASICS Gel')">🟣 Yapear</button></div>
+      <div class="cprecio">S/ 85</div>
+      <div class="cbtns"><button class="btn-cart" onclick="addCart('ASICS','Gel','VERDE',85,'https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg')">🛒</button><a href="https://wa.me/51958780838?text=Hola!%20Me%20interesa%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%92%B0%20S%2F%2085%0A%F0%9F%96%BC%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg%0A%C2%BFTienen%20disponible%3F" target="_blank" class="btn-wa">💬 Pedir</a><button class="btn-yape" onclick="openYape(85,'ASICS Gel')">🟣 Yapear</button></div>
     </div>
   </div>
 </div>
@@ -3349,6 +3350,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
       <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17187.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
     </div>
     <div class="ocard">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg" class="oimg" alt="NIKE Air Force 1 &#39;07">
+      <div class="oinfo">
+        <div class="onombre">NIKE Air Force 1 &#39;07</div>
+        <div class="ocolor">🎨 NEGRO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 90</span> <span class="oprecio">S/ 65</span></div>
+        <div class="otallas-lbl">📏 Toca tu talla</div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*41*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">41</a><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">43</a><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*44*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">44</a></div>
+      </div>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Air Force 1 &#39;07*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2065%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+    </div>
+    <div class="ocard">
       <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg" class="oimg" alt="GUCCI Run">
       <div class="oinfo">
         <div class="onombre">GUCCI Run</div>
@@ -3360,15 +3372,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
       <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*GUCCI%20Run*%0A%F0%9F%8E%A8%20Color%3A%20BEIGE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2045%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_52206.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
     </div>
     <div class="ocard">
-      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" class="oimg" alt="ASICS Gel">
+      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg" class="oimg" alt="NIKE Tempo">
       <div class="oinfo">
-        <div class="onombre">ASICS Gel</div>
-        <div class="ocolor">🎨 VERDE</div>
-        <div class="oprecio-row"><span class="oprecio-old">S/ 85</span> <span class="oprecio">S/ 70</span></div>
+        <div class="onombre">NIKE Tempo</div>
+        <div class="ocolor">🎨 NEGRO</div>
+        <div class="oprecio-row"><span class="oprecio-old">S/ 70</span> <span class="oprecio">S/ 50</span></div>
         <div class="otallas-lbl">📏 Toca tu talla</div>
-        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%93%8F%20Talla%3A%20*43*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">43</a></div>
+        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Tempo*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%93%8F%20Talla%3A%20*38*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2050%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">38</a></div>
       </div>
-      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel*%0A%F0%9F%8E%A8%20Color%3A%20VERDE%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
+      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*NIKE%20Tempo*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2050%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
     </div></div>
       </div>
     </div>
@@ -3379,22 +3391,53 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   <div class="sp-box" onclick="event.stopPropagation()">
     <button class="sp-x" onclick="closeSuper()">✕</button>
     <div class="sp-slides" id="sp-slides">
-    <div class="sp-slide on" data-fin="2026-10-09T11:25">
+    <div class="sp-slide on" data-fin="2026-10-09T15:20"
+         data-nombre="NIKE Air Force 1 &#39;07" data-color="NEGRO"
+         data-precio="65" data-old="90"
+         data-img="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg" data-tallas="41,43,44">
       <div class="sp-title">⚡ Consigue tu oferta ⚡</div>
       <div class="sp-sub2">Toma rápida</div>
       <div class="sp-stage">
+        <div class="sp-rays"></div>
         <div class="sp-glow"></div>
         <div class="sp-ring"></div>
-        <div class="sp-badge"><b>-18%</b><small>OFF</small></div>
-        <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" class="sp-shoe" alt="">
+        <div class="sp-badge"><b>-28%</b><small>OFF</small></div>
+        <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_11240.jpeg" class="sp-shoe" alt="">
       </div>
-      <div class="sp-plate"><s>S/ 85</s><span>S/</span> <b>70</b></div>
-      <div class="sp-name">ASICS Gel</div>
+      <div class="sp-plate"><s>S/ 90</s><span>S/</span> <b>65</b></div>
+      <div class="sp-tallas-box">
+        <div class="sp-tallas-lbl">📏 ELIGE TU TALLA</div>
+        <div class="sp-tallas"><button type="button" class="sp-talla" style="--i:0" data-t="41" onclick="spPick(this)">41</button><button type="button" class="sp-talla" style="--i:1" data-t="43" onclick="spPick(this)">43</button><button type="button" class="sp-talla" style="--i:2" data-t="44" onclick="spPick(this)">44</button></div>
+      </div>
+      <div class="sp-name">NIKE Air Force 1 &#39;07</div>
+      <div class="sp-bar"><i style="width:30%"></i></div>
+      <div class="sp-stock">¡Solo quedan 3!</div>
+    </div>
+    <div class="sp-slide" data-fin="2026-10-09T15:00"
+         data-nombre="NIKE Tempo" data-color="NEGRO"
+         data-precio="50" data-old="70"
+         data-img="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg" data-tallas="38">
+      <div class="sp-title">⚡ Consigue tu oferta ⚡</div>
+      <div class="sp-sub2">Toma rápida</div>
+      <div class="sp-stage">
+        <div class="sp-rays"></div>
+        <div class="sp-glow"></div>
+        <div class="sp-ring"></div>
+        <div class="sp-badge"><b>-29%</b><small>OFF</small></div>
+        <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17998.jpg" class="sp-shoe" alt="">
+      </div>
+      <div class="sp-plate"><s>S/ 70</s><span>S/</span> <b>50</b></div>
+      <div class="sp-tallas-box">
+        <div class="sp-tallas-lbl">📏 ELIGE TU TALLA</div>
+        <div class="sp-tallas"><button type="button" class="sp-talla" style="--i:0" data-t="38" onclick="spPick(this)">38</button></div>
+      </div>
+      <div class="sp-name">NIKE Tempo</div>
+      <div class="sp-bar"><i style="width:10%"></i></div>
       <div class="sp-stock">¡Solo quedan 1!</div>
     </div></div>
-    <div class="sp-dots" id="sp-dots"><i class="on"></i></div>
+    <div class="sp-dots" id="sp-dots"><i class="on"></i><i class=""></i></div>
     <div class="sp-timer">⏰ Termina en <b id="sp-timer">--:--:--</b></div>
-    <button class="sp-btn" onclick="closeSuper();openOfertas()"><span>Cógelo ahora 🔥</span></button>
+    <button class="sp-btn" onclick="spComprar()"><span>Cógelo ahora 🔥</span></button>
     <div class="sp-hurry">Stock limitado. El primero en llegar se lo lleva</div>
   </div>
 </div>
@@ -3602,7 +3645,7 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll('.card').forEach(c=>obs.observe(c));
 setTimeout(()=>{const b=document.getElementById('camp-bar');if(b)b.style.cssText='height:0;overflow:hidden;padding:0;transition:all .5s';},5000);
 
-let spIdx=0,spTimer=null;
+let spIdx=0,spTimer=null,spPaused=false;
 function closeSuper(){
   const o=document.getElementById('sp-overlay');if(o)o.classList.remove('on');
   clearInterval(spTimer);
@@ -3613,14 +3656,79 @@ function spShow(i){
   spIdx=((i%sl.length)+sl.length)%sl.length;
   sl.forEach((s,k)=>s.classList.toggle('on',k===spIdx));
   document.querySelectorAll('#sp-dots i').forEach((d,k)=>d.classList.toggle('on',k===spIdx));
+  spCount(sl[spIdx]);spBurst();spBtnTxt();
   try{if(navigator.vibrate)navigator.vibrate(30);}catch(e){}
 }
 function spSlides(){
-  clearInterval(spTimer);
+  clearInterval(spTimer);spPaused=false;
   spShow(0);
   if(document.querySelectorAll('.sp-slide').length<2)return;
-  spTimer=setInterval(()=>spShow(spIdx+1),3200);
+  spTimer=setInterval(()=>{if(!spPaused)spShow(spIdx+1);},3200);
 }
+// El precio "cae" desde el precio viejo hasta el precio final
+function spCount(slide){
+  const b=slide.querySelector('.sp-plate b');if(!b)return;
+  const to=parseInt(slide.dataset.precio)||0;
+  const from=parseInt(slide.dataset.old)||0;
+  if(!from||from<=to){b.textContent=to;return;}
+  const t0=performance.now();
+  (function f(t){
+    const p=Math.min(1,(t-t0)/1000),e=1-Math.pow(1-p,3);
+    b.textContent=Math.round(from-(from-to)*e);
+    if(p<1)requestAnimationFrame(f);
+  })(t0);
+}
+// Explosión de chispas al cambiar de slide
+function spBurst(){
+  const c=document.getElementById('sp-sparks');if(!c)return;
+  const cols=['#ffd740','#ff9800','#ffffff','#ff5722'];
+  for(let i=0;i<20;i++){
+    const e=document.createElement('u');
+    const a=Math.random()*6.283,d=90+Math.random()*140;
+    e.style.cssText='--x:'+(Math.cos(a)*d)+'px;--y:'+(Math.sin(a)*d)+'px;background:'+cols[i%4];
+    c.appendChild(e);setTimeout(()=>e.remove(),900);
+  }
+}
+function spPick(b){
+  const s=b.closest('.sp-slide');
+  s.querySelectorAll('.sp-talla').forEach(x=>x.classList.remove('sel'));
+  b.classList.add('sel');s.dataset.sel=b.dataset.t;
+  spPaused=true;spBtnTxt();
+  try{if(navigator.vibrate)navigator.vibrate(20);}catch(e){}
+}
+function spBtnTxt(){
+  const s=document.querySelector('.sp-slide.on'),el=document.querySelector('.sp-btn span');
+  if(!el)return;
+  el.textContent=(s&&s.dataset.sel)?'Cógelo ahora · Talla '+s.dataset.sel+' 🔥':'Cógelo ahora 🔥';
+}
+// "Cógelo ahora" -> directo a WhatsApp con la talla elegida
+function spComprar(){
+  const s=document.querySelector('.sp-slide.on');if(!s)return;
+  const NL=String.fromCharCode(10),d=s.dataset;
+  const L=['Hola! Vi la SÚPER OFERTA ⚡','👟 *'+d.nombre+'*','🎨 Color: '+d.color];
+  if(d.sel)L.push('📏 Talla: *'+d.sel+'*');
+  else if(d.tallas)L.push('📏 Tallas disponibles: '+d.tallas.split(',').join(', '));
+  L.push('💰 Precio oferta: S/ '+d.precio);
+  if(d.img)L.push('🖼 Foto: '+d.img);
+  L.push('¿Sigue disponible?');
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join(NL)),'_blank');
+  closeSuper();
+}
+// Efecto 3D: la zapatilla se inclina con el dedo / mouse
+(function(){
+  const box=document.querySelector('.sp-box');if(!box)return;
+  function tilt(x,y){
+    const st=document.querySelector('.sp-slide.on .sp-stage');if(!st)return;
+    const r=box.getBoundingClientRect();
+    const dx=(x-r.left)/r.width-.5,dy=(y-r.top)/r.height-.5;
+    st.style.transform='perspective(700px) rotateY('+(dx*28)+'deg) rotateX('+(-dy*28)+'deg)';
+  }
+  function reset(){const st=document.querySelector('.sp-slide.on .sp-stage');if(st)st.style.transform='';}
+  box.addEventListener('mousemove',e=>tilt(e.clientX,e.clientY));
+  box.addEventListener('touchmove',e=>tilt(e.touches[0].clientX,e.touches[0].clientY),{passive:true});
+  box.addEventListener('mouseleave',reset);
+  box.addEventListener('touchend',reset);
+})();
 function spFx(){
   const c=document.getElementById('sp-confetti');
   if(c){
