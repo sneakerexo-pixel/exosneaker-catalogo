@@ -276,31 +276,84 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 @keyframes zap{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.4) rotate(-12deg)}}
 @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
 
-/* Popup */
-.sp-overlay{display:none;position:fixed;inset:0;z-index:9500;align-items:center;
-  justify-content:center;background:radial-gradient(circle,rgba(255,23,68,.55),rgba(0,0,0,.93))}
-.sp-overlay.on{display:flex}
-.sp-confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:3}
-.sp-confetti i{position:absolute;top:-20px;width:9px;height:15px;border-radius:2px;
-  animation:fall linear infinite}
+/* ===== POPUP SÚPER OFERTA (estilo Temu) ===== */
+.sp-overlay{display:none;position:fixed;inset:0;z-index:9500;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 40%,rgba(120,50,10,.85),rgba(0,0,0,.96) 70%);
+  backdrop-filter:blur(4px)}
+.sp-overlay.on{display:flex;animation:ovIn .35s ease}
+@keyframes ovIn{from{opacity:0}to{opacity:1}}
+.sp-confetti,.sp-sparks{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:3}
+.sp-confetti i{position:absolute;top:-20px;width:9px;height:15px;border-radius:2px;animation:fall linear infinite}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-.sp-box{position:relative;overflow:hidden;width:88%;max-width:350px;text-align:center;
-  padding:22px 18px 18px;border-radius:24px;border:3px solid #ffd740;color:#fff;
-  background:linear-gradient(160deg,#ff1744 0%,#ff6d00 100%);
-  box-shadow:0 0 40px rgba(255,215,64,.7),0 0 90px rgba(255,23,68,.6);
-  animation:spIn .6s cubic-bezier(.2,1.5,.4,1),glow 1.6s .6s infinite}
-@keyframes spIn{from{transform:scale(.2) rotate(-12deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
-@keyframes glow{50%{box-shadow:0 0 60px rgba(255,215,64,1),0 0 120px rgba(255,23,68,.9)}}
-.sp-rays{position:absolute;inset:-70%;z-index:0;pointer-events:none;
-  background:repeating-conic-gradient(rgba(255,255,255,.17) 0 10deg,transparent 10deg 20deg);
-  animation:spin 9s linear infinite}
+.sp-sparks b{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;
+  background:#ffd27a;box-shadow:0 0 8px 2px #ff9a3c;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-110vh) translateX(var(--dx,0));opacity:0}}
+.sp-box{position:relative;width:92%;max-width:360px;text-align:center;color:#fff;
+  animation:boxIn .7s cubic-bezier(.2,1.4,.4,1)}
+@keyframes boxIn{from{transform:scale(.3) translateY(80px);opacity:0}to{transform:none;opacity:1}}
+.sp-x{position:absolute;top:-46px;right:4px;width:34px;height:34px;border-radius:50%;
+  background:rgba(0,0,0,.4);border:2px solid #fff;color:#fff;font-size:1rem;cursor:pointer;z-index:6}
+.sp-slides{position:relative;height:410px}
+.sp-slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  opacity:0;pointer-events:none;transform:translateX(90px) scale(.85);
+  transition:opacity .5s,transform .6s cubic-bezier(.2,1.2,.4,1)}
+.sp-slide.on{opacity:1;transform:none;pointer-events:auto}
+.sp-slide.out{opacity:0;transform:translateX(-90px) scale(.85)}
+.sp-title{font-size:1.25rem;font-weight:900;font-style:italic;text-shadow:0 2px 10px #000;
+  background:linear-gradient(90deg,#fff,#ffd27a,#fff);background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:txtShine 2.4s linear infinite}
+@keyframes txtShine{to{background-position:-200% 0}}
+.sp-sub2{margin-top:6px;padding:2px 22px;font-size:.85rem;font-weight:700;font-style:italic;
+  border-top:1px solid rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.35)}
+.sp-stage{position:relative;width:250px;height:250px;margin-top:10px;display:flex;align-items:center;justify-content:center}
+.sp-glow{position:absolute;inset:-10%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,170,60,.85),rgba(255,90,20,.35) 55%,transparent 72%);
+  animation:glowP 1.8s ease-in-out infinite}
+@keyframes glowP{50%{transform:scale(1.18);opacity:.75}}
+.sp-ring{position:absolute;inset:4%;border-radius:50%;border:2px dashed rgba(255,230,160,.7);animation:spin 10s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.sp-box>*:not(.sp-rays){position:relative;z-index:1}
-.sp-x{position:absolute!important;top:8px;right:12px;background:rgba(0,0,0,.35);border:none;
-  color:#fff;width:28px;height:28px;border-radius:50%;font-size:1rem;cursor:pointer;z-index:5}
-.sp-tag{font-weight:900;font-size:1.05rem;color:#ffd740;letter-spacing:2px;
-  text-shadow:0 2px 0 #b71c1c;animation:shake 1.4s infinite}
-@keyframes shake{0%,100%{transform:rotate(0)}10%,30%{transform:rotate(-5deg)}20%,40%{transform:rotate(5deg)}50%{transform:rotate(0)}}
+.sp-shoe{position:relative;z-index:2;width:215px;height:215px;object-fit:contain;background:#fff;
+  border-radius:26px;padding:10px;box-shadow:0 18px 30px rgba(0,0,0,.55);
+  animation:shoeF 2.6s ease-in-out infinite}
+.sp-slide.on .sp-shoe{animation:shoeIn .8s cubic-bezier(.2,1.5,.4,1),shoeF 2.6s .8s ease-in-out infinite}
+@keyframes shoeIn{from{transform:scale(.2) rotate(-40deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes shoeF{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg) scale(1.04)}}
+.sp-stage::after{content:'';position:absolute;z-index:3;top:0;left:-70%;width:40%;height:100%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg);animation:shine 2.8s infinite}
+.sp-badge{position:absolute;z-index:4;top:-4px;right:-6px;width:78px;height:78px;border-radius:50%;
+  background:radial-gradient(circle,#ff3d3d,#b71c1c);border:3px solid #ffd740;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transform:rotate(12deg);box-shadow:0 4px 14px rgba(0,0,0,.6);animation:beat 1.2s infinite}
+.sp-badge b{font-size:1.35rem;line-height:1}
+.sp-badge small{font-size:.6rem;letter-spacing:1px}
+.sp-plate{position:relative;z-index:5;margin-top:-18px;min-width:210px;padding:6px 22px;
+  background:linear-gradient(180deg,#5a3a12,#2a1a06);border:2px solid #d9a441;
+  border-radius:6px;box-shadow:0 0 18px rgba(255,170,60,.7);
+  display:flex;align-items:baseline;justify-content:center;gap:6px;animation:plateP 1.6s ease-in-out infinite}
+@keyframes plateP{50%{box-shadow:0 0 30px rgba(255,200,90,1);transform:scale(1.04)}}
+.sp-plate span{font-size:1.3rem;font-weight:800}
+.sp-plate b{font-size:2.6rem;font-weight:900;line-height:1;color:#fff3cf;text-shadow:0 2px 8px #000}
+.sp-plate s{position:absolute;top:-16px;right:10px;font-size:.75rem;color:#ffd7a0;opacity:.9}
+.sp-name{margin-top:8px;font-size:.88rem;font-weight:800;max-width:100%;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;text-shadow:0 2px 6px #000}
+.sp-stock{margin-top:2px;font-size:.74rem;font-weight:800;color:#ffd740;animation:blink 1.2s infinite}
+.sp-dots{display:flex;justify-content:center;gap:6px;margin:6px 0}
+.sp-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);transition:all .3s}
+.sp-dots i.on{width:20px;border-radius:5px;background:#ffd740}
+.sp-timer{font-size:.8rem;margin:4px 0 8px}
+.sp-timer b{background:#000;color:#ffd740;padding:3px 10px;border-radius:7px;font-variant-numeric:tabular-nums}
+.sp-btn{position:relative;overflow:hidden;display:block;width:100%;border:2px solid #ffd7b0;
+  border-radius:40px;padding:15px;font-size:1.1rem;font-weight:900;color:#fff;cursor:pointer;
+  background:linear-gradient(180deg,#ff8a3d,#ff3d1f 60%,#e0200f);
+  box-shadow:0 6px 22px rgba(255,80,30,.7),inset 0 2px 0 rgba(255,255,255,.5);
+  animation:btnP 1.3s ease-in-out infinite}
+.sp-btn::after{content:'';position:absolute;top:0;left:-80%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);
+  transform:skewX(-20deg);animation:shine 2.2s infinite}
+@keyframes btnP{50%{transform:scale(1.045)}}
+.sp-hurry{margin-top:10px;display:inline-block;padding:5px 14px;border-radius:14px;
+  background:rgba(0,0,0,.45);font-size:.72rem}
 
 /* ===== Mejoras súper oferta ===== */
 .sp-hero{position:relative;height:200px;margin:10px 0 4px}
@@ -344,13 +397,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   border:none;border-radius:14px;padding:13px;font-size:.95rem;font-weight:900;cursor:pointer}
 .sp-hurry{font-size:.68rem;margin-top:8px;opacity:.9}
 @media(prefers-reduced-motion:reduce){
-  .sp-slide img,.fcard,.fcard img,.sp-rays,.sp-box{animation:none}
+  .sp-shoe,.sp-glow,.sp-ring,.sp-btn,.sp-plate,.sp-badge,.fcard,.fcard img,.sp-box{animation:none}
 }
 </style>
 </head>
 <body>
 <div class="campaign-bar" id="camp-bar">
-  🎯 Actualizado 07/10/2026 11:08 · 166 disponibles · Toca una talla verde para pedir 🔥
+  🎯 Actualizado 09/10/2026 11:08 · 166 disponibles · Toca una talla verde para pedir 🔥
 </div>
 <header class="hdr">
   <div class="hdr-inner">
@@ -400,27 +453,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 <button class="fb" onclick="filtrar('UNDER ARMOUR',this)">UNDER ARMOUR</button>
 </div>
 
-<section class="flash">
-  <div class="flash-head">
-    <div class="flash-title"><span class="bolt">⚡</span> SUPER OFERTAS</div>
-    <div class="flash-timer">Termina en <b id="flash-timer">--:--:--</b></div>
-  </div>
-  <div class="flash-scroll">
-<div class="fcard" data-fin="2026-10-07T15:07" onclick="openOfertas()">
-  <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" alt="ASICS Gel Kayano" loading="lazy">
-  
-  <div class="fname">ASICS Gel Kayano</div>
-  <div class="fprice">S/ 60</div>
-  
-</div>
-<div class="fcard" data-fin="" onclick="openOfertas()">
-  <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" alt="ASICS Gel" loading="lazy">
-  <span class="fpct">-18%</span>
-  <div class="fname">ASICS Gel</div>
-  <div class="fprice">S/ 70</div>
-  <div class="fold">S/ 85</div>
-</div></div>
-</section>
 <div class="stats-bar">
   <span id="count-lbl">Mostrando <b>166</b> productos</span>
   <span style="color:var(--yellow)">🔥 Toca talla verde</span>
@@ -3226,17 +3258,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
       <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*MIZUNO%20Digawel*%0A%F0%9F%8E%A8%20Color%3A%20NEGRO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2070%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_91566.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
     </div>
     <div class="ocard">
-      <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" class="oimg" alt="ASICS Gel Kayano">
-      <div class="oinfo">
-        <div class="onombre">ASICS Gel Kayano</div>
-        <div class="ocolor">🎨 BLANCO</div>
-        <div class="oprecio-row"><span class="oprecio">S/ 60</span></div>
-        <div class="otallas-lbl">📏 Toca tu talla</div>
-        <div class="otallas"><a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%93%8F%20Talla%3A%20*40*%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="ot-ok">40</a></div>
-      </div>
-      <a href="https://wa.me/51958780838?text=Hola!%20Vi%20la%20OFERTA%20de%3A%0A%F0%9F%91%9F%20*ASICS%20Gel Kayano*%0A%F0%9F%8E%A8%20Color%3A%20BLANCO%0A%F0%9F%92%B0%20Precio%3A%20S%2F%2060%0A%F0%9F%96%BC%20Foto%3A%20https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg%0A%C2%BFSigue%20disponible%3F" target="_blank" class="obtn">💬 Pedir</a>
-    </div>
-    <div class="ocard">
       <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_27684.jpg" class="oimg" alt="HOKA Siflon 9">
       <div class="oinfo">
         <div class="onombre">HOKA Siflon 9</div>
@@ -3340,16 +3361,27 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 
 <div class="sp-overlay" id="sp-overlay" onclick="closeSuper()">
   <div class="sp-confetti" id="sp-confetti"></div>
+  <div class="sp-sparks" id="sp-sparks"></div>
   <div class="sp-box" onclick="event.stopPropagation()">
-    <div class="sp-rays"></div>
     <button class="sp-x" onclick="closeSuper()">✕</button>
-    <div class="sp-tag">⚡ SÚPER OFERTA ⚡</div>
-    <div class="sp-pimgs"><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_31267.jpg" class="sp-pimg" style="--k:0" alt=""><img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" class="sp-pimg" style="--k:1" alt=""></div>
-    <div class="sp-big">HASTA<span id="sp-num" data-pct="18">-18%</span></div>
-    <div class="sp-sub">2 zapatillas en súper oferta</div>
+    <div class="sp-slides" id="sp-slides">
+    <div class="sp-slide on" data-fin="2026-10-09T11:15">
+      <div class="sp-title">⚡ Consigue tu oferta ⚡</div>
+      <div class="sp-sub2">Toma rápida</div>
+      <div class="sp-stage">
+        <div class="sp-glow"></div>
+        <div class="sp-ring"></div>
+        <div class="sp-badge"><b>-18%</b><small>OFF</small></div>
+        <img src="https://raw.githubusercontent.com/sneakerexo-pixel/exosneaker-catalogo/main/imagenes/img_17227.jpg" class="sp-shoe" alt="">
+      </div>
+      <div class="sp-plate"><s>S/ 85</s><span>S/</span> <b>70</b></div>
+      <div class="sp-name">ASICS Gel</div>
+      <div class="sp-stock">¡Solo quedan 1!</div>
+    </div></div>
+    <div class="sp-dots" id="sp-dots"><i class="on"></i></div>
     <div class="sp-timer">⏰ Termina en <b id="sp-timer">--:--:--</b></div>
-    <button class="sp-btn" onclick="closeSuper();openOfertas()">🔥 VER OFERTAS 🔥</button>
-    <div class="sp-hurry">¡Stock limitado, se agotan rápido!</div>
+    <button class="sp-btn" onclick="closeSuper();openOfertas()"><span>Cógelo ahora 🔥</span></button>
+    <div class="sp-hurry">Stock limitado. El primero en llegar se lo lleva</div>
   </div>
 </div>
 <div id="toast"></div>
@@ -3561,22 +3593,26 @@ function closeSuper(){
   const o=document.getElementById('sp-overlay');if(o)o.classList.remove('on');
   clearInterval(spTimer);
 }
+function spShow(i){
+  const sl=[...document.querySelectorAll('.sp-slide')];
+  if(!sl.length)return;
+  spIdx=((i%sl.length)+sl.length)%sl.length;
+  sl.forEach((s,k)=>s.classList.toggle('on',k===spIdx));
+  document.querySelectorAll('#sp-dots i').forEach((d,k)=>d.classList.toggle('on',k===spIdx));
+  try{if(navigator.vibrate)navigator.vibrate(30);}catch(e){}
+}
 function spSlides(){
-  const sl=document.querySelectorAll('.sp-slide');
   clearInterval(spTimer);
-  if(sl.length<2)return;
-  spTimer=setInterval(()=>{
-    sl[spIdx].classList.remove('on');
-    spIdx=(spIdx+1)%sl.length;
-    sl[spIdx].classList.add('on');
-  },2600);
+  spShow(0);
+  if(document.querySelectorAll('.sp-slide').length<2)return;
+  spTimer=setInterval(()=>spShow(spIdx+1),3200);
 }
 function spFx(){
   const c=document.getElementById('sp-confetti');
   if(c){
     c.innerHTML='';
-    const cols=['#ff1744','#ffd740','#ffffff','#00e676','#2196f3','#ff9800'];
-    for(let i=0;i<50;i++){
+    const cols=['#ff1744','#ffd740','#ffffff','#ff9800','#ff5722'];
+    for(let i=0;i<60;i++){
       const e=document.createElement('i');
       e.style.left=Math.random()*100+'%';
       e.style.background=cols[i%cols.length];
@@ -3585,23 +3621,23 @@ function spFx(){
       c.appendChild(e);
     }
   }
-  const n=document.getElementById('sp-num');
-  if(n){
-    const t=parseInt(n.dataset.pct)||0;
-    if(t>0){
-      let v=0;
-      const iv=setInterval(()=>{
-        v+=Math.max(1,Math.round(t/25));
-        if(v>=t){v=t;clearInterval(iv);}
-        n.textContent='-'+v+'%';
-      },40);
+  const sp=document.getElementById('sp-sparks');
+  if(sp){
+    sp.innerHTML='';
+    for(let i=0;i<30;i++){
+      const b=document.createElement('b');
+      b.style.left=Math.random()*100+'%';
+      b.style.setProperty('--dx',(Math.random()*60-30)+'px');
+      b.style.animationDuration=(3+Math.random()*4)+'s';
+      b.style.animationDelay=(Math.random()*3)+'s';
+      sp.appendChild(b);
     }
   }
   try{if(navigator.vibrate)navigator.vibrate([150,80,150]);}catch(e){}
 }
 function showSuper(){
   const o=document.getElementById('sp-overlay');
-  if(!o)return;
+  if(!o||!document.querySelector('.sp-slide'))return;
   o.classList.add('on');spFx();spSlides();
 }
 function finActual(){
@@ -3610,31 +3646,48 @@ function finActual(){
     const d=c.dataset.fin?new Date(c.dataset.fin):null;
     if(d&&!isNaN(d)&&(!min||d<min))min=d;
   });
-  if(min)return min;
-  const e=new Date();e.setHours(23,59,59,999);return e;
+  return min;
 }
 function tickTimers(){
   const now=new Date();
+  // 1) Quitar lo vencido: tarjetas de la franja y slides del popup
   document.querySelectorAll('.fcard').forEach(c=>{
     const d=c.dataset.fin?new Date(c.dataset.fin):null;
     if(d&&!isNaN(d)&&d<=now)c.remove();
   });
-  if(!document.querySelector('.fcard')){
+  let quitoSlide=false;
+  document.querySelectorAll('.sp-slide').forEach(s=>{
+    const d=s.dataset.fin?new Date(s.dataset.fin):null;
+    if(d&&!isNaN(d)&&d<=now){s.remove();quitoSlide=true;}
+  });
+  if(quitoSlide){
+    const n=document.querySelectorAll('.sp-slide').length;
+    const dots=document.getElementById('sp-dots');
+    if(dots)dots.innerHTML=Array.from({length:n},()=>'<i></i>').join('');
+    if(n)spShow(0);
+  }
+  // 2) Si no queda ninguna oferta, eliminar todo
+  if(!document.querySelector('.fcard')||!document.querySelector('.sp-slide')){
     document.querySelectorAll('.flash,#sp-overlay').forEach(e=>e.remove());
+    clearInterval(spTimer);
+    document.body.style.overflow='';
     return;
   }
-  const s=Math.max(0,Math.floor((finActual()-now)/1000));
+  // 3) Cuenta regresiva hacia la próxima oferta que vence
+  const fin=finActual();
+  const ft=document.getElementById('flash-timer');
+  const st=document.getElementById('sp-timer');
+  if(!fin){
+    if(ft)ft.textContent='Por tiempo limitado';
+    if(st)st.textContent='Por tiempo limitado';
+    return;
+  }
+  const s=Math.max(0,Math.floor((fin-now)/1000));
   const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),sec=s%60;
   const p2=n=>String(n).padStart(2,'0');
   const txt=(d>0?d+'d ':'')+p2(h)+':'+p2(m)+':'+p2(sec);
-  const ft=document.getElementById('flash-timer');
   if(ft)ft.textContent=txt;
-  const st=document.getElementById('sp-timer');
   if(st)st.textContent=txt;
-  if(ft)ft.textContent=(d>0?d+'d ':'')+p2(h)+':'+p2(m)+':'+p2(sec);
-  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
-  set('sp-d',p2(d));set('sp-h',p2(h));set('sp-m',p2(m));set('sp-s',p2(sec));
-  const bd=document.getElementById('sp-dbox');if(bd)bd.style.display=d>0?'':'none';
 }
 setInterval(tickTimers,1000);tickTimers();
 (function(){
