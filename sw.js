@@ -1,4 +1,4 @@
-const CACHE_NAME='exo-catalogo-v1';
+const CACHE_NAME='exo-catalogo-v2';
 self.addEventListener('install',e=>{
   e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(['./','./index.html','./manifest.json'])));
   self.skipWaiting();
@@ -8,7 +8,7 @@ self.addEventListener('activate',e=>{
   self.clients.claim();
 });
 self.addEventListener('fetch',e=>{
-  if(e.request.method!=='GET')return;
+  if(e.request.method!=='GET'||e.request.destination==='video'||e.request.headers.has('range'))return;
   e.respondWith(
     fetch(e.request).then(res=>{
       const clone=res.clone();
